@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COS26 Flyer Maker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>I will be at <span>COS26</span></h1>
+    <p class="sub">Add your name and photo, then download your flyer and share it.</p>
+
+    <div class="card">
+      <label for="nm">Your name</label>
+      <input id="nm" type="text" maxlength="40" placeholder="e.g. Solomon Oppong-Tachie" autocomplete="name">
+    </div>
+
+    <div class="card">
+      <label>Your photo</label>
+      <label class="btn alt" for="ph">Choose a photo</label>
+      <input id="ph" type="file" accept="image/*">
+      <div class="row"><span>Zoom</span><input id="zm" type="range" min="1" max="3" step="0.01" value="1" disabled></div>
+      <div class="row">Drag the photo in the preview to position your face.</div>
+    </div>
+
+    <div class="card">
+      <div id="wrap"><canvas id="cv" width="1200" height="1500"></canvas></div>
+      <p id="msg"></p>
+      <button id="dl" class="btn" disabled>Download my flyer</button>
+    </div>
+  </main>
+
+  <img id="tpl" src="template.jpg" alt="" hidden>
+  <script src="script.js"></script>
+</body>
+</html>

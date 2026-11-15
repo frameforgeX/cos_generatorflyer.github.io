@@ -1,0 +1,141 @@
+:root {
+  --bg: #fff7ec;
+  --card: #ffffff;
+  --ink: #2a0a16;
+  --muted: #7a5a64;
+  --brand: #9d003c;
+  --brand-ink: #ffffff;
+  --gold: #ffa800;
+  --line: #ead9cc;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a0610;
+    --card: #2a0d1b;
+    --ink: #fbeee4;
+    --muted: #c3a1ae;
+    --brand: #d4175a;
+    --line: #4a2233;
+    color-scheme: dark;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    "Syne",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+main {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+h1 {
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 8px 0 4px;
+  font-weight: 800;
+}
+h1 span {
+  color: var(--gold);
+}
+.sub {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 15px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  font-size: 17px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: inherit;
+}
+input[type="text"]:focus {
+  outline: 2px solid var(--brand);
+  border-color: transparent;
+}
+.btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  border: 0;
+  font-weight: 800;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--brand);
+  color: var(--brand-ink);
+}
+.btn.alt {
+  background: transparent;
+  color: var(--brand);
+  border: 1.5px solid var(--brand);
+  margin: 0;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+input[type="file"] {
+  display: none;
+}
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+}
+input[type="range"] {
+  flex: 1;
+  accent-color: var(--brand);
+}
+#wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+  border: 1px solid var(--line);
+}
+canvas {
+  width: 100%;
+  height: auto;
+  touch-action: none;
+  cursor: grab;
+}
+#msg {
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 10px 0;
+  min-height: 20px;
+}
